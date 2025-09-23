@@ -63,8 +63,8 @@ switch ($Task)
         Write-Host "→ Target RID: $rid"
         # Use full path to dotnet on macOS
         $dotnetCmd = if ($IsMacOS) { '/usr/local/share/dotnet/dotnet' } else { 'dotnet' }
-        & $dotnetCmd publish dstream-dotnet-test.csproj -c Release -r $rid -p:DebugType=none -o out
-        # dotnet publish dstream-dotnet-test.csproj -c Release -r win-x64 -p:DebugType=none -o out
+        & $dotnetCmd publish counter-input-provider.csproj -c Release -r $rid -p:DebugType=none -o out
+        # dotnet publish counter-input-provider.csproj -c Release -r win-x64 -p:DebugType=none -o out
     }
     'clean' {
         Write-Host '→ Cleaning…'
