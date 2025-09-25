@@ -5,7 +5,7 @@ using CounterInputProvider;
 // Reads JSON config from stdin, outputs JSON envelopes to stdout
 // Perfect for testing pipelines and demonstrating DStream input providers
 
-// Top-level program entry point
-await StdioProviderHost.RunInputProviderAsync<CounterInputProvider.CounterInputProvider, CounterInputProvider.CounterConfig>();
+// Top-level program entry point  
+await StdioProviderHost.RunProviderWithCommandAsync<CounterInputProvider.CounterInputProvider, CounterInputProvider.CounterConfig>();
 
 
